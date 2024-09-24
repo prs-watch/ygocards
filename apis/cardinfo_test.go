@@ -4,19 +4,19 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/prs-watch/ygocards/internal/client"
+	"github.com/prs-watch/ygocards/types"
 )
 
 func TestRun(t *testing.T) {
 	type args struct {
-		p client.Params
+		p types.Params
 	}
 	tests := []struct {
 		name string
 		args args
 	}{
-		{"Search existing card", args{client.Params{Name: "Dark Magician"}}},
-		{"Search non-existing card", args{client.Params{Name: "Dark Magicians"}}},
+		{"Search existing card", args{types.Params{Name: "Dark Magician"}}},
+		{"Search non-existing card", args{types.Params{Name: "Dark Magicians"}}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

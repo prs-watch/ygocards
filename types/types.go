@@ -1,12 +1,4 @@
-package client
-
-import "net/url"
-
-// API Client.
-type Client struct {
-	URL    *url.URL
-	Params Params
-}
+package types
 
 // APIにパスするパラメータを定義.
 type Params struct {
