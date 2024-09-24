@@ -1,22 +1,20 @@
-package apis
+package ygocards
 
 import (
 	"fmt"
 	"testing"
-
-	"github.com/prs-watch/ygocards"
 )
 
 func TestRun(t *testing.T) {
 	type args struct {
-		p ygocards.Params
+		p Params
 	}
 	tests := []struct {
 		name string
 		args args
 	}{
-		{"Search existing card", args{ygocards.Params{Name: "Dark Magician"}}},
-		{"Search non-existing card", args{ygocards.Params{Name: "Dark Magicians"}}},
+		{"Search existing card", args{Params{Name: "Dark Magician"}}},
+		{"Search non-existing card", args{Params{Name: "Dark Magicians"}}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

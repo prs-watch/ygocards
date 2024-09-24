@@ -102,7 +102,7 @@ func CreateParams() Params {
 }
 
 // Clientのinitialize定義.
-func CreateClient(p Params, u string) Client {
+func createClient(p Params, u string) Client {
 	up, _ := url.Parse(u)
 	return Client{
 		URL:    up,
@@ -111,7 +111,7 @@ func CreateClient(p Params, u string) Client {
 }
 
 // Client側でHTTPリクエストを実行.
-func (c *Client) Run() (Response, error) {
+func (c *Client) run() (Response, error) {
 	q := c.URL.Query()
 	ts := reflect.TypeOf(c.Params)
 	vs := reflect.ValueOf(c.Params)
