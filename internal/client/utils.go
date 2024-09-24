@@ -1,4 +1,4 @@
-package ygocards
+package client
 
 import "unicode"
 
