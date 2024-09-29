@@ -77,6 +77,6 @@ type CardPrice struct {
 
 // Clientのレスポンス定義.
 type Response struct {
-	Data  []Card
+	Data  []Card `json:"data"`
 	Error string `json:"error"`
 }
